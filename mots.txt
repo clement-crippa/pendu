@@ -33,6 +33,14 @@ lampe
 ferme
 tourbillon
 armure
-zombiesalade
+zombie
+salade
 tomate
 navet
+sel
+sardine
+wagon
+oeuf
+boeuf
+koala
+cerf

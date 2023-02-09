@@ -16,7 +16,6 @@ class Bouton():
     def afficher_bouton(self, surface):
         action = False
         pos = pygame.mouse.get_pos()
-
         if self.rect.collidepoint(pos):
             # Si on appuie sur le bouton active l'action
             if pygame.mouse.get_pressed()[0] == 1:

@@ -59,14 +59,22 @@ def ajouter_mot():
             if touche_appuie.type == pygame.QUIT:
                 pygame.quit()
                 sys.exit()
-            elif touche_appuie.type == pygame.KEYDOWN:
+            if touche_appuie.type == pygame.KEYDOWN:
                 if touche_appuie.unicode.isalpha() or touche_appuie.unicode == ' ':
                     mot += touche_appuie.unicode
+                elif touche_appuie.key == pygame.K_BACKSPACE:
+                    mot = mot[:-1]
+                    pygame.display.update()
                 elif touche_appuie.key == pygame.K_RETURN:
                     with open('mots.txt', 'a') as z:
                         z.write(mot + '\n')
                     menu()
+        fenetre.fill((255, 255, 255))
+        texte_1 = texte_police.render("Écrivez un mot pour l'ajouter puis validé avec la touche enter:", True, (0, 0, 0))
+        fenetre.blit(texte_1, (50, 420))
         texte_police = pygame.font.Font(None, 36)
+        jouer_bouton.afficher_bouton(fenetre)
+        ajouter_bouton.afficher_bouton(fenetre)
         texte = texte_police.render(mot, True, (0, 0, 0))
         fenetre.blit(texte, (350, 450))
         pygame.display.update()
@@ -128,12 +136,14 @@ def jouer():
             texte = texte_police.render("Gagné!", True, (0, 255, 0))
             fenetre.blit(texte, (300, 500))
             pygame.display.update()
-            pygame.time.wait(5000)
+            pygame.time.wait(3000)
+            menu()
             break
         # Partie perdue
         elif nombre_de_fautes == 8:
             pygame.display.update()
-            pygame.time.wait(5000)
+            pygame.time.wait(3000)
+            menu()
             break
 
 
