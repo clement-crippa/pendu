@@ -44,3 +44,10 @@ oeuf
 boeuf
 koala
 cerf
+meduse
+lavande
+poison
+poisson
+lapin
+religieux
+kart

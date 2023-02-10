@@ -24,7 +24,5 @@ class Bouton():
                 self.clique = False
         # Affiche le bouton sur la fenêtre voulu
         surface.blit(self.image, (self.rect.x, self.rect.y))
-
         return action
-# Se remet à zéro après avoir réalisé l'action
-clique = False
+
