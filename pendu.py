@@ -106,9 +106,6 @@ def jouer():
             if touche_appuie.type == pygame.QUIT:
                 pygame.quit()
                 sys.exit()
-                # Retour au menu avec echap
-            elif touche_appuie.key == pygame.K_ESCAPE:
-                menu()
             # Lettre jouée par l'utilisateur en appuyant sur le clavier
             elif touche_appuie.type == pygame.KEYDOWN:
                 if touche_appuie.unicode.isalpha():
