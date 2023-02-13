@@ -1,5 +1,4 @@
-# Jeu du Pendu
-Quand vous êtes en partie veuillez ne pas bouger la souris.
+# Jeu du Pendu  
 Pour valider au moment d'ajouter un mot appuyé sur la touche entrer (enter).  
 Pour annuler appuyer sur Echap.  
 /!\  
