@@ -20,7 +20,7 @@ class Bouton():
             # Si on appuie sur le bouton active l'action
             if pygame.mouse.get_pressed()[0] == 1:
                 self.clique = True
-            elif pygame.mouse.get_pressed()[1] == 0:
+        if pygame.mouse.get_pressed()[0] == 0:
                 self.clique = False
         # Affiche le bouton sur la fenêtre voulu
         surface.blit(self.image, (self.rect.x, self.rect.y))
